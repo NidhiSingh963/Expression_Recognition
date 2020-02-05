@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<style type="text/css">
+
+    th:tr{
+        color: blue;
+
+    }
+    tr:nth-of-type(2n){
+        border: 1px solid black;
+        background-color: rgba(150, 150, 150, 0.5);
+
+    }
+
+    td{
+        padding: 8px 8px;
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+
+
+<table style="margin-left: 20px;">
+<th>
+        <tr style="color: green; ">
+        <td>Image Displayed</td>
+        <td>EMotion Present</td>
+</tr>
+    </th>
+ {% for img_name in results %}
+ <tr>
+    <td><img src="{{ img_name[0] }}"></img></td>
+    <td><p>:Expression found is: {{img_name[1]}} </p>
+        <br></br><p>:Expression Counts: {{img_name[2]}} </p>                                        </td>
+
+
+
+
+
+
+
+	{% endfor %}
+</tr>
+</table>
+</body>
+</html>
