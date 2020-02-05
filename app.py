@@ -233,4 +233,4 @@ def upload_file():
             return redirect(request.url)
 
 if __name__ == "__main__":
-    app.run(debug=True,host='localhost', port=8080)
+    app.run()
